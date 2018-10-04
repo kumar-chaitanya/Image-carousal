@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  background-color: rgb(6, 109, 143);
+}
+
+.wrapper {
+  width: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  max-height: 100vh;
+}
+
+.slider img {
+  display: block;
+  width: 100%;
+  max-height: 100vh;
+}
+
+.caption-wrapper {
+  opacity: 0;
+  position: absolute;
+  color: #fff;
+}
+
+.caption-wrapper > * {
+  margin: 0.8rem;
+}
+
+.caption-wrapper > h3 {
+  font-size: 2rem;
+}
+
+.caption-wrapper > p {
+  font-size: 1.2rem;
+}
+
+.wrapper .slider img.fadeOut {
+  animation: fadeOut 250ms forwards linear;
+}
+
+.caption-top {
+  text-align: center;
+  top: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0%, 0);
+}
+
+.caption-right {
+  text-align: right;
+  right: 0;
+  top: 50%;
+  transform: translate3d(0%, -50% , 0);
+}
+
+.caption-bottom {
+  text-align: center;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0%, 0);
+}
+
+.caption-left {
+  text-align: left;
+  top: 50%;
+}
+
+.top {
+  animation: top 6.5s ease-in 750ms 1 forwards;
+}
+
+.right {
+  animation: right 6.5s ease-in 750ms 1 forwards;
+}
+
+.bottom {
+  animation: bottom 6.5s ease-in 750ms 1 forwards;
+}
+
+.left {
+  animation: left 6.5s ease-in 750ms 1 forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes top {
+  0% {
+    opacity: 0;
+    transform: translate3d(-50%, 50%, 0);
+  }
+  7%, 96% {
+    opacity: 1;
+    transform: translate3d(-50%, 90%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(-50%, 40%, 0);
+  }
+}
+
+@keyframes right {
+  0% {
+    opacity: 0;
+    transform: translate3d(-10%, -50%, 0);
+  }
+  7%, 96% {
+    opacity: 1;
+    transform: translate3d(-40%, -50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0%, -50%, 0);
+  }
+}
+
+@keyframes bottom {
+  0% {
+    opacity: 0;
+    transform: translate3d(-50%, 0%, 0);
+  }
+  7%, 96% {
+    opacity: 1;
+    transform: translate3d(-50%, -80%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(-50%, -20%, 0);
+  }
+}
+
+@keyframes left {
+  0% {
+    opacity: 0;
+    transform: translate3d(0%, 0%, 0);
+  }
+  7%, 96% {
+    opacity: 1;
+    transform: translate3d(30%, 0%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(-10%, 0%, 0);
+  }
+}
